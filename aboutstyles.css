@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.about-section {
+    height: 100vh;
+    background-color: black;
+}
+
+.name {
+    color: white;
+    font-weight: 600;
+    position: absolute;
+    top: 6rem;
+    right: 10rem;
+}
+
+.title {
+    color: white;
+}
