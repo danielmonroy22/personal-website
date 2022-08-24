@@ -8,18 +8,156 @@
 }
 
 .about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 100vh;
+
     background-color: black;
 }
 
 .name {
     color: white;
     font-weight: 600;
-    position: absolute;
+    position: fixed;
     top: 6rem;
     right: 10rem;
+    animation: name-animation 1000ms ease-in;
 }
 
 .title {
     color: white;
+
+    font-size: 7rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    animation: title-animation 1000ms ease-in;
+}
+
+.personal-image {
+    height: 100vh;
+    background-color: black;
+
+}
+
+.image-about {
+    height: 90%;
+    width: 40%;
+    margin: 2rem 4rem;
+
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+
+    padding: 3rem;
+    height: 100%;
+    background-color: black;
+    color: white;
+
+}
+
+.h1-description {
+    font-size: 3rem;
+}
+
+.description-content {
+
+    width: 60%;
+    margin: auto;
+
+}
+
+.description-content p {
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+.resume-link {
+    text-decoration: none;
+    color: red;
+
+}
+
+.resume-div {
+
+    width: 20%;
+    margin-top: 10px;
+}
+
+
+.resume-div:hover {
+    transform: translateX(-20%);
+}
+
+
+
+
+@keyframes title-animation {
+    0% {
+        transform: translateY(200%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes name-animation {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+/* media queries */
+@media (max-width: 760px) {
+
+    .title {
+        font-size: 4rem;
+    }
+
+    .name {
+        top: 20px;
+        right: 25px;
+    }
+
+    .personal-image {
+        height: 70vh;
+    }
+
+    .image-about {
+        width: 70%;
+    }
+
+    .description-content {
+
+        width: 100%;
+
+
+    }
+
+}
+
+@media(min-width:280px) and (max-width:375px) {
+    .title {
+        font-size: 4rem;
+    }
+
+    .name {
+        top: 20px;
+        right: 25px;
+    }
+}
+
+@media (max-width:830px) {
+    .name {
+        top: 20px;
+        right: 25px;
+    }
 }

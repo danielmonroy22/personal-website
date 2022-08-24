@@ -60,8 +60,20 @@
     color: red;
     font-weight: 900;
     line-height: 1;
-    animation: animation-loading-page 1000ms ease-in;
+
     cursor: pointer;
+
+
+}
+
+.first-h1:hover {
+    transform: translateX(-25%);
+}
+
+
+.first-h1 {
+    animation: animation-loading-page 1000ms ease-in;
+
 
 }
 
