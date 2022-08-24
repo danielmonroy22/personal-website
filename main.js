@@ -1,7 +1,11 @@
 
 var firsth1 = document.querySelector(".firsth1");
+var first_h1 = document.querySelector(".first-h1");
 var secondh1 = document.querySelector(".secondh1");
 var thirdh1 = document.querySelector(".thirdh1");
+var x = window.matchMedia("(max-width:375px)");
+
+
 
 // firsth1 event listeners
 firsth1.addEventListener("mouseover", () => {
@@ -30,3 +34,4 @@ thirdh1.addEventListener('mouseout', () => {
     thirdh1.innerHTML = "Daniel";
     thirdh1.style.color = "white"
 })
+

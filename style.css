@@ -68,6 +68,7 @@
 
 .first-h1:hover {
     transform: translateX(-25%);
+
 }
 
 
@@ -89,6 +90,11 @@
     line-height: 1;
     cursor: pointer;
 
+
+}
+
+.secondh1:hover {
+    transform: translateX(-45%);
 
 }
 
