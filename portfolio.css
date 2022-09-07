@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&display=swap");
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vwa;
+
+    background-color: black;
+}
+
+.name {
+    color: white;
+    font-weight: 600;
+    position: fixed;
+    top: 6rem;
+    right: 10rem;
+    animation: name-animation 1000ms ease-in;
+}
+
+.name a {
+    text-decoration: none;
+    color: white;
+}
+
+.title {
+    color: white;
+
+    font-size: 6rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    animation: title-animation 1000ms ease-in;
+}
+
+
+
+
+/* Portfolio Section */
+
+.portfolio-section {
+    height: 100%;
+    background-color: black;
+    padding: 60px;
+}
+
+/* * cards --> portfolio section */
+.cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+
+    height: 80vh;
+    padding: 100px;
+}
+
+.card-principal {
+    height: 70%;
+    width: 80%;
+    background-color: black;
+
+    border-radius: 20px;
+
+}
+
+.card-title,
+.description {
+    color: white;
+
+
+}
+
+.card-title a {
+    color: white;
+    text-decoration: none;
+
+}
+
+.card-title a:hover {
+    text-decoration: underline;
+}
+
+.card-title {
+    padding-left: 10px;
+}
+
+.description {
+    padding-top: 10px;
+    padding-left: 10px;
+
+    width: 100%;
+}
+
+
+
+.cardToHide {
+    height: 20%;
+    width: 25%;
+    background-image: url(./images/rock-papaer-scissors.png);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    position: absolute;
+    transition: height 1s;
+
+
+
+}
+
+.cardToHide1 {
+    height: 20%;
+    width: 25%;
+    background-image: url(./images/solar-website-image.png);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    position: absolute;
+    transition: height 1s;
+
+
+
+}
+
+.cardToHide2 {
+    height: 20%;
+    width: 25%;
+    background-image: url(./images/Ecomerce-website.png);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    position: absolute;
+    transition: height 1s;
+
+
+
+}
+
+.cardToHide3 {
+    height: 20%;
+    width: 25%;
+    background-image: url(./images/Glass-Website.png);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    position: absolute;
+    transition: height 1s;
+
+
+
+}
+
+.cardToHide4 {
+    height: 20%;
+    width: 25%;
+    background-image: url(./images/hero-website.png);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    position: absolute;
+    transition: height 1s;
+
+
+
+}
+
+.cardToHide5 {
+    height: 20%;
+    width: 25%;
+    background-image: url(./images/Bootstrap-website-image.png);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    position: absolute;
+    transition: height 1s;
+
+
+
+}
+
+
+
+
+.card-principal:hover .cardToHide {
+    height: 0px;
+}
+
+.card-principal:hover .cardToHide1 {
+    height: 0px;
+}
+
+.card-principal:hover .cardToHide2 {
+    height: 0px;
+}
+
+.card-principal:hover .cardToHide3 {
+    height: 0px;
+}
+
+.card-principal:hover .cardToHide4 {
+    height: 0px;
+}
+
+.card-principal:hover .cardToHide5 {
+    height: 0px;
+}
+
+/* test */
+
+@keyframes reduce-height {
+    0% {
+        height: 185px;
+    }
+
+    50% {
+        height: 40px;
+    }
+
+    100% {
+        height: 0px;
+    }
+}
+
+@keyframes title-animation {
+    0% {
+        transform: translateY(-200%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes name-animation {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+/* media queries */
+@media (max-width: 760px) {
+    .name {
+        top: 5px;
+        right: 5px;
+    }
+
+
+    .about-section {
+        justify-content: center;
+        align-items: center;
+        height: 30vh;
+
+    }
+
+
+    /* .card-title,
+    .description {
+        background-color: aqua;
+        width: 100%;
+    } */
+
+    .cardToHide,
+    .cardToHide1,
+    .cardToHide2,
+    .cardToHide3,
+    .cardToHide4,
+    .cardToHide5 {
+        width: 90%;
+        height: 20%;
+
+
+
+    }
+
+    .cardToHide4 {
+        margin-bottom: 10px;
+    }
+
+
+
+    .card-principal {
+
+        width: 100%;
+
+        padding: 10px;
+
+    }
+
+    .portfolio-section {
+        height: 100%;
+    }
+
+    .title {
+        font-size: 3rem;
+
+    }
+
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        padding: 10px;
+        row-gap: 80px;
+        height: 100%;
+
+
+        justify-content: center;
+        align-items: center;
+    }
+
+    .portfolio-section {
+        padding: 0px;
+        height: auto;
+        background-color: black;
+    }
+}
+
+@media(min-width:280px) and (max-width:375px) {}
+
+@media (max-width:830px) {}

@@ -37,7 +37,9 @@
     font-size: 7rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
-    animation: title-animation 1000ms ease-in;
+    /* animation: title-animation 1000ms ease-in; */
+    -webkit-animation: tracking-in-expand 0.4s cubic-bezier(0.755, 0.050, 0.855, 0.060) 0.3s both;
+    animation: tracking-in-expand 0.4s cubic-bezier(0.755, 0.050, 0.855, 0.060) 0.3s both;
 }
 
 .personal-image {
@@ -50,6 +52,8 @@
     height: 90%;
     width: 40%;
     margin: 2rem 4rem;
+
+
 
 }
 
@@ -96,6 +100,39 @@
 .resume-div:hover {
     transform: translateX(-20%);
 }
+
+/* keyFrames */
+@-webkit-keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
 
 
 
