@@ -7,6 +7,13 @@
     font-family: 'Roboto', sans-serif;
 }
 
+/* mobile div */
+.mobile-div {
+    display: none;
+
+}
+
+
 /* Home Page */
 .home-page {
     width: 100%;
@@ -115,6 +122,19 @@
 
 
 /* KEY frames */
+@keyframes mobile-animation {
+    0% {
+        transform: translateY(0px);
+    }
+
+
+
+    100% {
+        transform: translateY(-8px);
+
+    }
+}
+
 @keyframes animation-loading-page {
     0% {
         transform: translateX(-100%);
@@ -153,10 +173,23 @@
     }
 }
 
+
 /* media queries */
 @media (max-width: 760px) {
+    .mobile-div {
+        color: white;
+        position: absolute;
+        top: 25px;
+        left: 40%;
+        animation: mobile-animation .5s cubic-bezier(.5, .6, .6, 1) infinite alternate;
+        animation-iteration-count: infinite;
+        display: block;
+    }
+
+
     .firsth1 {
         font-size: 60px;
+
     }
 
     .secondh1 {
