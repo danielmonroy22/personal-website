@@ -6,11 +6,12 @@ var thirdh1 = document.querySelector(".thirdh1");
 var name_tag = document.querySelector(".nametag");
 var x = window.matchMedia("(max-width:400px)");
 var x2 = window.matchMedia("(max-width:1024px)");
+var ipadPro = window.matchMedia("(min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) and (hover: none)");
 var home_page = document.querySelector(".container-home-page");
 var clicks = 0;
 
 
-if (x.matches || x2.matches) {
+if (x.matches || x2.matches || ipadPro.matches) {
     home_page.addEventListener("click", () => {
         if (clicks === 0) {
             firsth1.innerHTML = "About";
