@@ -28,7 +28,7 @@
 .image-home-page {
 
     flex: 1;
-    background-image: url(./images/home-page-image.jpg);
+    background-image: url(/images/home-page-image.jpg);
     background-position: top;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -257,4 +257,25 @@
 
     }
 
+}
+
+@media (max-width:1024px) {
+
+    /* image */
+    .image-home-page {
+
+        background-position: center;
+        background-size: cover;
+    }
+
+    .mobile-div {
+        color: white;
+        position: absolute;
+        font-size: larger;
+        top: 25px;
+        left: 48%;
+        animation: mobile-animation .5s cubic-bezier(.5, .6, .6, 1) infinite alternate;
+        animation-iteration-count: infinite;
+        display: block;
+    }
 }

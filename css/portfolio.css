@@ -106,7 +106,7 @@
 .cardToHide {
     height: 20%;
     width: 25%;
-    background-image: url(./images/rock-papaer-scissors.png);
+    background-image: url(/images/rock-papaer-scissors.png);
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -121,7 +121,7 @@
 .cardToHide1 {
     height: 20%;
     width: 25%;
-    background-image: url(./images/solar-website-image.png);
+    background-image: url(/images/solar-website-image.png);
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -136,7 +136,7 @@
 .cardToHide2 {
     height: 20%;
     width: 25%;
-    background-image: url(./images/Ecomerce-website.png);
+    background-image: url(/images/Ecomerce-website.png);
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -151,7 +151,7 @@
 .cardToHide3 {
     height: 20%;
     width: 25%;
-    background-image: url(./images/Glass-Website.png);
+    background-image: url(/images/Glass-Website.png);
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -166,7 +166,7 @@
 .cardToHide4 {
     height: 20%;
     width: 25%;
-    background-image: url(./images/hero-website.png);
+    background-image: url(/images/hero-website.png);
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -181,7 +181,7 @@
 .cardToHide5 {
     height: 20%;
     width: 25%;
-    background-image: url(./images/Bootstrap-website-image.png);
+    background-image: url(/images/Bootstrap-website-image.png);
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;

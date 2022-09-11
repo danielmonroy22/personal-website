@@ -5,10 +5,12 @@ var secondh1 = document.querySelector(".secondh1");
 var thirdh1 = document.querySelector(".thirdh1");
 var name_tag = document.querySelector(".nametag");
 var x = window.matchMedia("(max-width:400px)");
+var x2 = window.matchMedia("(max-width:1024px)");
 var home_page = document.querySelector(".container-home-page");
 var clicks = 0;
 
-if (x) {
+
+if (x.matches || x2.matches) {
     home_page.addEventListener("click", () => {
         if (clicks === 0) {
             firsth1.innerHTML = "About";
@@ -29,9 +31,9 @@ if (x) {
 
 }
 
+
+
 else {
-
-
 
     // firsth1 event listeners
     firsth1.addEventListener("mouseover", () => {
