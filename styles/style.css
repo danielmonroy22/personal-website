@@ -16,10 +16,11 @@
 
 /* Home Page */
 .home-page {
-    min-width: 100%;
+    min-width: 100vw;
     min-height: 100vh;
     background-color: black;
     display: flex;
+
 
 
 }
@@ -208,10 +209,12 @@
 
     }
 
+
+
     .mobile-div {
         color: rgb(255, 255, 255);
         position: absolute;
-        top: 25px;
+        bottom: 35px;
         left: 40%;
         animation: mobile-animation .5s cubic-bezier(.5, .6, .6, 1) infinite alternate;
         animation-iteration-count: infinite;
@@ -252,9 +255,7 @@
         display: block;
     }
 
-    .home-page {
-        width: 100%;
-    }
+
 }
 
 
