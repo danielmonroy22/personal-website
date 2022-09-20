@@ -28,7 +28,7 @@
 .image-home-page {
 
     flex: 1;
-    background-image: url(/images/home-page-image.jpg);
+    background-image: url(./images/home-page-image.jpg);
     background-position: top;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -202,7 +202,7 @@
     }
 
     .container-home-page {
-        background-image: url(/images/home-page-image.jpg);
+        background-image: url(./images/home-page-image.jpg);
         background-size: 200%;
         background-repeat: no-repeat;
         gap: 10px;
