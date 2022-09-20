@@ -41,13 +41,12 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     /* animation: title-animation 1000ms ease-in; */
-    -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.680, -0.550, 0.265, 1.550) both;
-    animation: tracking-in-expand 0.7s cubic-bezier(0.680, -0.550, 0.265, 1.550) both;
-
+    -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 
 .contact {
-    height: 100vh;
+    min-height: 100vh;
     background-color: black;
     display: flex;
     flex-direction: column;
@@ -94,6 +93,35 @@
 .plattforms p:hover {
     transform: translateX(-25%);
 }
+
+@-webkit-keyframes text-focus-in {
+    0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes text-focus-in {
+    0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
 
 
 @keyframes title-animation {
@@ -160,7 +188,13 @@
 
 
 /* media queries */
-@media (max-width: 760px) {
+
+/* cellphone media queries */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .contact {
+        min-height: auto;
+    }
 
     .title {
         font-size: 4rem;
@@ -180,26 +214,61 @@
     .plattforms p:hover {
         transform: translateX(0);
     }
-
-
-
-
 }
 
-@media(min-width:280px) and (max-width:375px) {
+/* cellphone media queries portrait */
+
+@media only screen and (min-device-width: 600px) and (max-device-height: 420px) {
     .title {
         font-size: 4rem;
+        padding: 0px 10px;
     }
 
     .name {
         top: 20px;
         right: 25px;
     }
+
+    .contact-info {
+        width: 100%;
+        padding: 0px 20px;
+    }
+
+
+
+    .plattforms p:hover {
+        transform: translateX(0);
+    }
+
 }
 
-@media (max-width:830px) {
+/* ipad mini and air media queries */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+    .title {
+        font-size: 4rem;
+        padding: 0px 10px;
+    }
+
     .name {
         top: 20px;
         right: 25px;
+        font-size: xx-large;
+    }
+
+    .contact-info {
+        width: 100%;
+        padding: 0px 20px;
+    }
+
+
+
+    .plattforms p:hover {
+        transform: translateX(0);
+    }
+
+    .contact {
+        min-height: 50vh;
+        padding: 0px;
+        margin: 0px;
     }
 }

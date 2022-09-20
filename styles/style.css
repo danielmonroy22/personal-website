@@ -16,7 +16,7 @@
 
 /* Home Page */
 .home-page {
-    width: 100%;
+    min-width: 100vw;
     min-height: 100vh;
     background-color: black;
     display: flex;
@@ -175,11 +175,8 @@
 
 
 /* media queries */
-
-/* CellPhone Media */
-@media (max-width: 760px) {
-
-
+/* cellphone media queries test */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
     .mobile-div {
         color: white;
         position: absolute;
@@ -191,18 +188,14 @@
     }
 
 
-    .firsth1 {
-        font-size: 60px;
-
-    }
-
-    .secondh1 {
-        font-size: 60px;
-    }
-
+    .firsth1,
+    .secondh1,
     .thirdh1 {
         font-size: 60px;
+
     }
+
+
 
     .image-home-page {
         display: none;
@@ -223,43 +216,68 @@
 
     }
 
-
 }
 
-@media(min-width:280px) and (max-width:375px) {
+/* galaxy fold media queries */
+@media only screen and (max-width: 280px) {
+    .image-home-page {
+        background-position: center;
+        background-size: cover;
 
 
-    .firsth1 {
-        font-size: 40px;
     }
 
-    .secondh1 {
-        font-size: 40px;
-    }
-
+    .firsth1,
+    .secondh1,
     .thirdh1 {
-        font-size: 40px;
+        font-size: 60rem;
+
+    }
+}
+
+
+/* portrait cellphones iphones */
+@media only screen and (max-width: 915px) {
+
+    .firsth1,
+    .secondh1,
+    .thirdh1 {
+        font-size: 4rem;
+
+    }
+
+    .mobile-div {
+        color: white;
+        position: absolute;
+        top: 25px;
+        left: 45%;
+        animation: mobile-animation .5s cubic-bezier(.5, .6, .6, 1) infinite alternate;
+        animation-iteration-count: infinite;
+        display: block;
+    }
+}
+
+/* ipad mini and air media queries */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+    .container-home-page {
+        gap: 20px;
+
     }
 
     .image-home-page {
-        display: none;
+        background-position: center;
+        background-size: cover;
     }
 
-    .container-home-page {
-        background-image: url(/images/home-page-image.jpg);
-        background-size: 200%;
-        background-repeat: no-repeat;
-        gap: 10px;
-        justify-content: center;
-        align-items: start;
-
-
-
-
+    .firsth1,
+    .secondh1,
+    .thirdh1 {
+        font-size: 6rem;
 
     }
-
 }
+
+
 
 /* ipad pro 12.9 media queries with orientation too */
 @media only screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) and (hover: none) {
