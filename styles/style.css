@@ -16,7 +16,7 @@
 
 /* Home Page */
 .home-page {
-    min-width: 100vw;
+    min-width: 100%;
     min-height: 100vh;
     background-color: black;
     display: flex;
@@ -177,15 +177,7 @@
 /* media queries */
 /* cellphone media queries test */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    .mobile-div {
-        color: white;
-        position: absolute;
-        top: 25px;
-        left: 40%;
-        animation: mobile-animation .5s cubic-bezier(.5, .6, .6, 1) infinite alternate;
-        animation-iteration-count: infinite;
-        display: block;
-    }
+
 
 
     .firsth1,
@@ -202,7 +194,7 @@
     }
 
     .container-home-page {
-        background-image: url();
+        background-image: url(../images/home-page-image.jpg);
         background-size: 200%;
         background-repeat: no-repeat;
         gap: 10px;
@@ -213,6 +205,17 @@
 
 
 
+
+    }
+
+    .mobile-div {
+        color: rgb(255, 255, 255);
+        position: absolute;
+        top: 25px;
+        left: 40%;
+        animation: mobile-animation .5s cubic-bezier(.5, .6, .6, 1) infinite alternate;
+        animation-iteration-count: infinite;
+        display: block;
 
     }
 
@@ -237,25 +240,24 @@
 
 
 /* portrait cellphones iphones */
-@media only screen and (max-width: 915px) {
-
-    .firsth1,
-    .secondh1,
-    .thirdh1 {
-        font-size: 4rem;
-
-    }
-
+/* Portrait */
+@media only screen and (min-device-width: 320px) and (max-device-width: 896px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
     .mobile-div {
-        color: white;
+        color: aqua;
         position: absolute;
         top: 25px;
-        left: 45%;
+        left: 40%;
         animation: mobile-animation .5s cubic-bezier(.5, .6, .6, 1) infinite alternate;
         animation-iteration-count: infinite;
         display: block;
     }
+
+    .home-page {
+        width: max-content;
+    }
 }
+
+
 
 /* ipad mini and air media queries */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
