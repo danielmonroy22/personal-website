@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 
+
+
 * {
     margin: 0px;
     padding: 0px;
@@ -15,11 +17,14 @@
 
 
 /* Home Page */
-.home-page {
+main {
     min-width: 100vw;
     min-height: 100vh;
+    /* Fallback for browsers that do not support Custom Properties */
+    min-height: calc(var(--vh, 1vh) * 100);
     background-color: black;
     display: flex;
+    overflow: hidden;
 
 
 
@@ -46,13 +51,14 @@
     justify-content: center;
     align-items: center;
     flex: 1;
+    overflow: hidden;
 
 }
 
 .firsth1,
 .secondh1,
 .thirdh1 {
-    font-size: 9rem;
+    font-size: 9Rem;
     color: white;
 
     text-decoration: none;
@@ -176,16 +182,22 @@
 
 
 /* media queries */
-/* cellphone media queries test */
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+/* cellphone media queries  */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation:portrait) {
 
 
 
     .firsth1,
     .secondh1,
     .thirdh1 {
-        font-size: 60px;
+        font-size: 5rem;
 
+    }
+
+    main {
+        overflow: hidden;
+
+        /* min-height: 90vh; */
     }
 
 
@@ -213,9 +225,11 @@
 
     .mobile-div {
         color: rgb(255, 255, 255);
+        font-size: larger;
+        font-weight: 700;
         position: absolute;
-        bottom: 35px;
-        left: 40%;
+        bottom: 30px;
+        left: 35%;
         animation: mobile-animation .5s cubic-bezier(.5, .6, .6, 1) infinite alternate;
         animation-iteration-count: infinite;
         display: block;
@@ -227,8 +241,20 @@
 /* galaxy fold media queries */
 @media only screen and (max-width: 280px) {
     .image-home-page {
-        background-position: center;
-        background-size: cover;
+        display: none;
+    }
+
+    .container-home-page {
+        background-image: url(../images/home-page-image.jpg);
+        background-size: 200%;
+        background-repeat: no-repeat;
+        gap: 10px;
+        justify-content: center;
+        align-items: start;
+        padding-left: 20px;
+
+
+
 
 
     }
@@ -236,24 +262,52 @@
     .firsth1,
     .secondh1,
     .thirdh1 {
-        font-size: 60rem;
+        font-size: 3rem;
+
+    }
+
+    .mobile-div {
+        color: rgb(255, 255, 255);
+
+        font-weight: 500;
+        position: absolute;
+        bottom: 30px;
+        left: 33%;
+        animation: mobile-animation .5s cubic-bezier(.5, .6, .6, 1) infinite alternate;
+        animation-iteration-count: infinite;
+        display: block;
 
     }
 }
 
 
-/* portrait cellphones iphones */
-/* Portrait */
+/* landscape cellphones iphones */
+/* landscape */
 @media only screen and (min-device-width: 320px) and (max-device-width: 896px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
     .mobile-div {
-        color: rgb(9, 255, 0);
+        color: rgb(255, 255, 255);
         position: absolute;
         top: 25px;
-        left: 40%;
+        left: 42%;
         animation: mobile-animation .5s cubic-bezier(.5, .6, .6, 1) infinite alternate;
         animation-iteration-count: infinite;
         display: block;
+        font-size: larger;
+        font-weight: 700;
     }
+
+    .firsth1,
+    .secondh1,
+    .thirdh1 {
+        font-size: 5rem;
+
+    }
+
+
+    /* main {
+        height: 100%;
+    } */
+
 
 
 }
@@ -304,3 +358,11 @@
         display: block;
     }
 }
+
+/* The hack for Safari */
+/* @supports (-webkit-touch-callout: none) {
+    body {
+   
+      /* height: -webkit-fill-available; */
+/* }
+  } */

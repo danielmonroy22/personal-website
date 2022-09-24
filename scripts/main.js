@@ -1,17 +1,25 @@
 
-var firsth1 = document.querySelector(".firsth1");
-var first_h1 = document.querySelector(".first-h1");
-var secondh1 = document.querySelector(".secondh1");
-var thirdh1 = document.querySelector(".thirdh1");
-var name_tag = document.querySelector(".nametag");
-var x = window.matchMedia("(max-width:400px)");
-var x2 = window.matchMedia("(max-width:1024px)");
-var ipadPro = window.matchMedia("(min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) and (hover: none)");
-var home_page = document.querySelector(".container-home-page");
+let firsth1 = document.querySelector(".firsth1");
+let first_h1 = document.querySelector(".first-h1");
+let secondh1 = document.querySelector(".secondh1");
+let thirdh1 = document.querySelector(".thirdh1");
+let name_tag = document.querySelector(".nametag");
+let phonePortrait = window.matchMedia("(min-device-width: 320px) and (max-device-width: 480px) and (orientation:portrait)");
+let phoneLandscape = window.matchMedia("(min-device-width: 320px) and (max-device-width: 896px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape)");
+let ipadPro = window.matchMedia("(min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) and (hover: none)");
+let home_page = document.querySelector("main");
+
 var clicks = 0;
 
+// Then we set the value in the --vh custom property to the root of the document
+window.addEventListener('resize', () => {
+    // We execute the same script as before
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
 
-if (x.matches || x2.matches || ipadPro.matches) {
+if (phonePortrait.matches || phoneLandscape.matches || ipadPro.matches) {
+
     home_page.addEventListener("click", () => {
         if (clicks === 0) {
             firsth1.innerHTML = "About";
@@ -35,6 +43,7 @@ if (x.matches || x2.matches || ipadPro.matches) {
 
 
 else {
+
 
     // firsth1 event listeners
     firsth1.addEventListener("mouseover", () => {
